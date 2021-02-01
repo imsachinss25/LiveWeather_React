@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Jost', sans-serif;
+}
+
+body{
+    background: #f3f2ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.box{
+    width: 25vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 3rem rgba(0,0,0,0,2);
+    background: #a5bbdd;
+    position: relative;
+    overflow: hidden;
+    transform: translate(0,0,0);
+    min-width: 20rem;
+    min-height: 35rem;
+}
+
+.wave{
+    opacity: 0.3;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    background: white;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: 1;
+}
+.two{
+    animation: drift 7000ms infinite linear;
+    opacity: 0.1;
+    z-index: 3!important;
+
+}
+
+.three{
+    animation: drift 5000ms infinite linear;
+    z-index: 2!important;
+    opacity: 0.2;
+}
+
+@keyframes drift{
+    from{
+        transform: rotate(0deg);
+    }
+    from{
+        transform: rotate(360deg);
+    }
+}
+.inputField{
+    width: 70%;
+    margin: auto!important;
+    border-radius: 5rem!important;
+    padding: 1rem 1rem!important;
+    outline: none;
+    font-size: 1.5rem;
+}
+.inputData{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.errorMsg{
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem auto;
+}
+.info{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 40vh;
+    z-index: 4;
+}
+.location{
+    
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+    text-transform: capitalize;
+    padding-top: 3rem ;
+}
+.fa{
+    height: 150%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    animation: roam 2s linear infinite alternate;
+    animation: rotates 2s linear infinite alternate;
+}
+
+@keyframes rotates{
+    from{
+        transform: translateX(-3.5rem);
+    }
+    to{
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes roam{
+    from{
+        transform: scale(0.8);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+.temp{
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.tempmin_max{
+    text-align: center;
+    margin-top: 0.3rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #57606f;
+}
+
+@media only screen and (max-width: 600px){
+   
+    .box{
+        width: 60vw!important;
+        height: 90vh!important;
+        
+        
+        
+    }
+    .wave{
+        top: 65%;
+    }
+    .info{
+        font-size: 1.5rem;
+        transform: scale(0.8);
+    
+    }
+    .location{
+        font-size: 3rem;
+        margin-top: 14rem;
+    }
+   
+}
+
+@media (min-width: 1024px){
+    .box{
+        width: 60vh;
+        height: 60vh;
+    }
+    
+}
+@media (min-height: 1024px){
+    .box{
+        width: 60vh;
+        height: 60vh;
+    }
+}
+
+@media (max-height: 400px){
+    .box{
+       
+        height: 100vh;
+    }
+    .wave{
+        top: 115%;
+    }
+    .location{
+        font-size: 3rem;
+        padding-top: 14rem;
+    }
+   
+}
+
+@media only screen and (max-width: 1024px){
+
+    .box{
+        width: 30vw!important;
+        height: 80vh!important;
+        }
+    .wave{
+        top: 65%;
+    }
+    .info{
+        font-size: 1.5rem;
+        transform: scale(0.8);
+    
+    }
+    .location{
+        margin-top: 10rem;
+    }
+   
+    
+}
+
+
+
+@media (max-width: 350px){
+    .box{
+       width: 30vw;
+        height: 100vh;
+    }
+    .wave{
+        top: 45%;
+    }
+  
+    .info{
+        transform: scale(0.5);
+    }
+    .location{
+        padding-top: 16rem;
+    }
+   
+}
+@media (max-width: 650px){
+    .box{
+       width: 30vw;
+        height: 100vh;
+    }
+    .wave{
+        top: 65%;
+    }
+  
+    .info{
+        transform: scale(0.8);
+    }
+    .location{
+        padding-top: 5rem;
+    }
+   
+}
